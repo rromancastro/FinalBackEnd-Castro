@@ -1,8 +1,8 @@
 import { ProductManager } from "../managers/product-manager";
 
 class ProductControler {
-    constructor(manager) {
-        this.manager = manager;
+    constructor(service) {
+        this.service = service;
     }
 
     getAll = async (req, res, next) => {

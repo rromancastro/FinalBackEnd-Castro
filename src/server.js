@@ -6,6 +6,9 @@ import { initMongoDB } from './config/db-connection.js';
 
 const app = express();
 
+const cartRoutes = require('./src/carts/cart.routes');
+app.use('/api/carts', cartRoutes);
+
 app.engine('handlebars', handlebars.engine());
 
 app.set('views', path.join(`${process.cwd()}/src/views`));
